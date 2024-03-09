@@ -1,0 +1,18 @@
+.service-page {
+  width: 100%;
+  height: calc(100vh - 120px);
+
+  .cardCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    padding: 40px;
+
+    h3 {
+      font-weight: 700;
+      color: #4f3428;
+    }
+  }
+}

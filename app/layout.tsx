@@ -1,8 +1,38 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/navbar/navbar.component";
+
 
 const inter = Inter({ subsets: ["latin"] });
+
+const arima = localFont({
+  src: [
+    {
+      path: "../public/fonts/ArimaMadurai-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    // {
+    //   path: "./Roboto-Italic.woff2",
+    //   weight: "400",
+    //   style: "italic",
+    // },
+    // {
+    //   path: "./Roboto-Bold.woff2",
+    //   weight: "700",
+    //   style: "normal",
+    // },
+    // {
+    //   path: "./Roboto-BoldItalic.woff2",
+    //   weight: "700",
+    //   style: "italic",
+    // },
+  ],
+  variable: "--font-arima",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +45,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="cs">
+      <body className={arima.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

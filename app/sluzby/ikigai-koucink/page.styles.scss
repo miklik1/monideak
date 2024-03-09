@@ -1,0 +1,32 @@
+.ikigai-page {
+  width: 100%;
+  height: calc(100vh - 120px);
+
+  .textCont {
+    max-width: 640px;
+
+    .highlight {
+      font-weight: bold;
+      color: #8d2e2a;
+    }
+
+    h2 {
+      color: #5b161b;
+      font-weight: bold;
+    }
+  }
+
+  .cardCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 540px;
+    padding: 40px;
+
+    h3 {
+      font-weight: 700;
+      color: #4f3428;
+    }
+  }
+}

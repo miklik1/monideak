@@ -1,0 +1,18 @@
+.spoluprace-page {
+  width: 100%;
+  height: calc(100vh - 120px);
+
+  .textCont {
+    max-width: 600px;
+
+    .highlight {
+      font-weight: bold;
+      color: #8d2e2a;
+    }
+
+    h2 {
+      color: #5b161b;
+      font-weight: bold;
+    }
+  }
+}

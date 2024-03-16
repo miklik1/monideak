@@ -38,7 +38,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="formCont">
+    <div className="formCont px-8 md:px-12 py-12 w-full">
       <h4 className="font-bold text-xl">Můžete mi zanechat zprávu</h4>
       <form onSubmit={handleSubmit(processForm)} className="mt-6">
         <div className="mt-6 flex-1">

@@ -23,11 +23,10 @@ export default function Button({
   };
 
   return (
-    <div
-      className={`${inter.className} button`}
-      style={buttonStyle}
-    >
-      <Link href={href}>{children}</Link>
-    </div>
+    <Link href={href}>
+      <div className={`${inter.className} button`} style={buttonStyle}>
+        {children}
+      </div>
+    </Link>
   );
 }

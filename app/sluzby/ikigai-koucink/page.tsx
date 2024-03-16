@@ -6,8 +6,8 @@ import Card from "@/components/card/card.component";
 export default function Ikigai() {
   return (
     <main className="ikigai-page flex justify-center">
-      <div className="container p-4 flex flex-col lg:flex-row-reverse justify-between">
-        <div className="flex justify-center xl:items-start py-4 xl:p-10">
+      <div className="container p-4 flex flex-col lg:flex-row-reverse justify-between gap-4">
+        <div className="flex justify-center md:items-start py-4 xl:p-10">
           <Image
             className="relative"
             src="/ikigai-large.svg"

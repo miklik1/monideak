@@ -4,11 +4,11 @@ import Button from "@/components/button/button.component";
 
 export default function Home() {
   return (
-    <main className="page">
-      <div className="cont px-8 py-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
+    <main className="page page-background-side flex justify-center px-6 py-12">
+      <div className="container content-wrapper">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="heading">
-            <h1 className="text-3xl md:text-6xl mb-7">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl mb-7">
               Pomáhám lidem,
               <br />
               kteří se chtějí rozvíjet
@@ -25,13 +25,14 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="image-section p-4">
+          <div className="image-section">
             <Image
               className="relative"
               src="/images/homepage.png"
               alt="Homepage Picture"
               width={473}
               height={704}
+              style={{ width: "auto", height: "auto" }}
               priority
             />
           </div>

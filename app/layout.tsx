@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.scss";
 import Navbar from "@/components/navbar/navbar.component";
+import Providers from "./providers";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -48,7 +49,7 @@ export default function RootLayout({
     <html lang="cs">
       <body className={arima.className}>
         <Navbar />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

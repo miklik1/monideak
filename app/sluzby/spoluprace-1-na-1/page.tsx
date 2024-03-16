@@ -10,7 +10,7 @@ export default function Spoluprace() {
       <div className="container p-4 flex flex-col lg:flex-row justify-between">
         <div className="textCont flex gap-8 flex-col px-2 py-4 xl:p-10">
           <Link href="/sluzby">{"<- Zpět"}</Link>
-          <h1 className="my-4 text-5xl">Spolupráce 1 na 1</h1>
+          <h1 className="my-4 text-4xl md:text-6xl">Spolupráce 1 na 1</h1>
           <div>
             <p>Podpora na vaší cestě k životní spokojenosti a svobodě.</p>
             <ul className="list-disc pl-5">

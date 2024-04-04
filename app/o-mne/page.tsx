@@ -38,7 +38,7 @@ export default function Home() {
               height={704}
               style={{ width: "auto", height: "auto" }}
               priority
-              quality={100}
+              quality={75}
             />
           </div>
         </div>

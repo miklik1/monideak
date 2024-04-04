@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <main className="page page-background-bottom flex justify-start px-6 py-12">
       <div className="container content-wrapper !my-0">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
           <div className="flex flex-col items-start justify-center gap-12">
             <h1 className="text-4xl md:text-6xl">Kontakt</h1>
             <p className="text-xl font-bold ">monikadeak@gmail.com</p>
@@ -40,19 +40,28 @@ export default function Contact() {
             </div>
             <div>
               <Button variant="variant-4" href="https://www.reservio.com/">
-                Rezervujte si úvodní hovor
+                <div className="flex">
+                  Rezervujte si úvodní hovor
+                  <Image
+                    className="relative ml-2"
+                    src="/icons/external-link.svg"
+                    alt="link"
+                    width={24}
+                    height={24}
+                    priority
+                  />
+                </div>
               </Button>
             </div>
           </div>
           <div className="image-section">
             <Image
-              className="relative"
               src="/images/contact.png"
               alt="kontakt foto"
               width={408}
               height={427}
               priority
-              quality={100}
+              quality={75}
             />
           </div>
         </div>

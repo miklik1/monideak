@@ -29,7 +29,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="image-section max-w-[70%] md:max-w-[50%] lg:max-w-[40%]">
+          <div className="image-section max-w-[70%] md:max-w-[50%] lg:max-w-[40%] mb-10">
             <Image
               className="relative"
               src="/images/about.png"

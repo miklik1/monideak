@@ -59,7 +59,7 @@ export default function Ikigai() {
           </p>
           <Card variant="variant-3">
             <div className="cardCont gap-2 m-4 p-2 text-left">
-              <p className="highlight text-lg text-left">PRŮBĚH</p>
+              <p className="highlight text-xl self-start">PRŮBĚH</p>
               <p>
                 0. Úvodní schůzka - 30 minut{" "}
                 <span className="text-mylightred font-bold">ZDARMA</span>

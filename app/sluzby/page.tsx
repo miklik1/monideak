@@ -10,7 +10,7 @@ export default function Services() {
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl mb-8 mt-8 lg:mb-16 lg:mt-0">
           Jak vám můžu pomoci
         </h1>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-10">
           <Card>
             <div className="cardCont gap-3">
               <Image

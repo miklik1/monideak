@@ -54,7 +54,7 @@ export default function Contact() {
               </Button>
             </div>
           </div>
-          <div className="image-section">
+          <div className="image-section mb-10">
             <Image
               src="/images/contact.png"
               alt="kontakt foto"

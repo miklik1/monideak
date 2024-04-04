@@ -6,14 +6,13 @@ import ContactForm from "@/components/forms/contact-form";
 
 export default function Contact() {
   return (
-    <main className="page page-background-bottom flex flex-col justify-center items-center px-6 py-6">
-        <div className="container content-wrapper flex gap-8 flex-col md:flex-row items-center justify-between">
-          <div className="heading max-w-2xl">
-            <h1 className="text-4xl md:text-6xl mb-4 md:mb-10">Kontakt</h1>
-            <p className="text-xl font-bold mb-4 md:mb-10">
-              monikadeak@gmail.com
-            </p>
-            <div className="flex gap-x-8 mb-4 md:mb-10">
+    <main className="page page-background-bottom flex justify-start px-6 py-12">
+      <div className="container content-wrapper !my-0">
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-col items-start justify-center gap-12">
+            <h1 className="text-4xl md:text-6xl">Kontakt</h1>
+            <p className="text-xl font-bold ">monikadeak@gmail.com</p>
+            <div className="flex gap-x-8">
               <Image
                 className="relative"
                 src="/icons/facebook.svg"
@@ -45,7 +44,7 @@ export default function Contact() {
               </Button>
             </div>
           </div>
-          <div className="image-section p-4">
+          <div className="image-section">
             <Image
               className="relative"
               src="/images/contact.png"
@@ -53,13 +52,15 @@ export default function Contact() {
               width={408}
               height={427}
               priority
+              quality={100}
             />
           </div>
         </div>
-        <div className="container flex gap-8 md:gap-16 flex-col md:flex-row items-center justify-between">
-          <ContactForm />
-          <ContactForm />
-        </div>
+      </div>
+      {/* <div className="container flex gap-8 md:gap-16 flex-col md:flex-row items-center justify-between">
+        <ContactForm />
+        <ContactForm />
+      </div> */}
     </main>
   );
 }

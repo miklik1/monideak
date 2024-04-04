@@ -8,26 +8,28 @@ export default function Home() {
       <div className="container content-wrapper">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-8">
           <div className="heading max-w-2xl">
-            <h1 className="text-3xl  md:text-6xl mb-6">Ahoj, já jsem Monika</h1>
-            <p className="text-lg md:text-xl mb-6">
-              Lorem ipsum dolor sit amet consectetur. Blandit faucibus
-              adipiscing id nam gravida pulvinar mus cras vulputate.Lorem ipsum
-              dolor sit amet consectetur. Blandit faucibus adipiscing id nam
-              gravida pulvinar mus cras vulputate.Lorem ipsum dolor sit amet
-              consectetur.
-            </p>
-            <p className="text-lg md:text-xl mb-6">
-              Lorem ipsum dolor sit amet consectetur. Blandit adipiscing id nam
-              gravida pulvinar mus cras vulputate.Lorem ipsum dolor sit amet
-              consectetur. Blandit faucibus adipiscing id nam gravida.
-            </p>
+            <h1 className="text-3xl  md:text-5xl mb-6">Ahoj, já jsem Monika</h1>
+            <div className="max-w-[550px]">
+              <p className="text-lg mb-6">
+                Lorem ipsum dolor sit amet consectetur. Blandit faucibus
+                adipiscing id nam gravida pulvinar mus cras vulputate.Lorem
+                ipsum dolor sit amet consectetur. Blandit faucibus adipiscing id
+                nam gravida pulvinar mus cras vulputate.Lorem ipsum dolor sit
+                amet consectetur.
+              </p>
+              <p className="text-lg mb-6">
+                Lorem ipsum dolor sit amet consectetur. Blandit adipiscing id
+                nam gravida pulvinar mus cras vulputate.Lorem ipsum dolor sit
+                amet consectetur. Blandit faucibus adipiscing id nam gravida.
+              </p>
+            </div>
             <div className="">
               <Button href="sluzby" variant="variant-2">
                 Jak vám můžu pomoci
               </Button>
             </div>
           </div>
-          <div className="image-section p-4">
+          <div className="image-section">
             <Image
               className="relative"
               src="/images/about.png"
@@ -36,6 +38,7 @@ export default function Home() {
               height={704}
               style={{ width: "auto", height: "auto" }}
               priority
+              quality={100}
             />
           </div>
         </div>

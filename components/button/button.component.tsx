@@ -13,7 +13,7 @@ export type TButtonProps = {
 export default function Button({
   href,
   bgColor,
-  variant = "variant-1",
+  variant,
   children,
 }: TButtonProps) {
   const backgroundUrl = `/buttons/${variant}.svg`;
@@ -24,7 +24,12 @@ export default function Button({
 
   return (
     <Link href={href}>
-      <div className={`${inter.className} button`} style={buttonStyle}>
+      <div
+        className={`${inter.className} ${!variant && "mr-8 black"} ${
+          variant === "variant-6" && "black"
+        } button`}
+        style={buttonStyle}
+      >
         {children}
       </div>
     </Link>

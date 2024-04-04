@@ -5,7 +5,7 @@ import Card from "@/components/card/card.component";
 
 export default function Ikigai() {
   return (
-    <main className="ikigai-page flex justify-center">
+    <main className="ikigai-page page-background-bottom-small flex justify-center">
       <div className="container p-4 flex flex-col lg:flex-row-reverse justify-between gap-4">
         <div className="flex justify-center md:items-start py-4 xl:p-10">
           <Image
@@ -19,9 +19,9 @@ export default function Ikigai() {
         </div>
         <div className="textCont flex gap-8 flex-col px-2 py-4 xl:p-10">
           <p>
-            <span className="highlight text-xl">IKIGAI</span> je moudrá
+            <span className="highlight text-2xl">IKIGAI</span> je životní
             filosofie pocházející z Japonska, jejíž podstatou je žít naplněný
-            život, který vás baví a dává vám smysl. 
+            život, který vás baví a dává vám smysl.
           </p>
           <p>
             Znát své IKIGAI znamená lépe porozumět sám sobě a svým potřebám. Žít
@@ -29,14 +29,16 @@ export default function Ikigai() {
             zdraví.
           </p>
           <p>
-            <span className="highlight text-xl">IKIGAI KOUČINK</span> je
+            <span className="highlight text-2xl">IKIGAI KOUČINK</span> je
             intenzivní sebepoznávací proces, který vás dovede na to správné
             místo. Pojďte prozkoumat, kým opravdu jste, vaše dary, talenty a
             skutečná přání. Najděte hlubší smysl svého každodenního života a
             žijte jej v souladu se sebou i ostatními.
           </p>
           <div>
-            <p>Na této objevné cestě získáte:</p>
+            <p className="text-lg text-mylightred font-bold">
+              NA TÉTO OBJEVNÉ CESTĚ ZÍSKÁTE:
+            </p>
             <ul className="list-disc pl-5">
               <li>nový podporující pohled na vás a váš život</li>
               <li>větší jasnost ve vašem dalším směřování a vizích</li>
@@ -49,23 +51,26 @@ export default function Ikigai() {
               <li>bezpečný prostor pro váš nový nádech do života</li>
             </ul>
           </div>
-          <p>IKIGAI KOUČINK je individuální 3 měsíční spolupráce.</p>
           <p>
-            Čeká nás úvodní schůzka a 5 společných setkání ( cca 60 minut co 14
-            dní), na kterých budeme postupně mapovat tématické okruhy, jež se
-            dotýkají vašeho osobního i pracovního života.
+            IKIGAI KOUČINK je individuální 3 měsíční spolupráce, během které nás
+            čeká úvodní schůzka a 5 společných setkání (cca 60 minut co 14 dní),
+            na kterých budeme postupně mapovat tématické okruhy, jež se dotýkají
+            vašeho osobního i pracovního života.
           </p>
           <Card variant="variant-3">
             <div className="cardCont gap-2 m-4 p-2 text-left">
+              <p className="highlight text-lg text-left">PRŮBĚH</p>
               <p>
                 0. Úvodní schůzka - 30 minut{" "}
-                <span className="highlight">ZDARMA</span>
+                <span className="text-mylightred font-bold">ZDARMA</span>
                 <br />
                 Ladíme se na sebe navzájem a na vaše téma, přiblížím vám průběh
                 celého procesu, zhodnotíme, zda nám vzájemná spolupráce dává
                 smysl.
               </p>
-              <p>Následuje 5 sezení:</p>
+              <p className="text-mylightred font-bold mt-2">
+                NÁSLEDUJE 5 SEZENÍ:
+              </p>
               <ol className="list-decimal pl-4">
                 <li>Co milujete (co je vaší vášní a činí vám radost)</li>
                 <li>V čem vynikáte (vaše silné stránky a strategie úspěchu)</li>
@@ -99,7 +104,7 @@ export default function Ikigai() {
             Jako BONUS ode mne obdržíte překvapení, které vás ještě více podpoří
             na vaší další cestě.
           </p>
-          <p>Setkání probíhají online (ZOOM)</p>
+          <p>Setkání probíhají online.</p>
           <div>
             <h2 className="text-xl md:text-2xl">
               Cena celého procesu je 14 000 Kč

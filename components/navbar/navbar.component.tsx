@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="container navbarContent">
         <Link href="/">
           <Image
-            className="relative pr-8 sm:pr-0"
+            className="relative pr-8 sm: pr-0"
             src="/logo.svg"
             alt="Monika Deakova Koucink a Mentoring Logo"
             width={229}
@@ -24,7 +24,16 @@ export default function Navbar() {
             priority
           />
         </Link>
-        {!isKontaktPage && <Button href="/kontakt">Kontakt</Button>}
+        <div>
+          <Button href="/sluzby">
+            Nabídka
+          </Button>
+          {!isKontaktPage && (
+            <Button variant="variant-6" href="/kontakt">
+              Kontakt
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

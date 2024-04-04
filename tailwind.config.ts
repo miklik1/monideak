@@ -10,6 +10,13 @@ const config: Config = {
     container: {
       center: true,
       padding: "1rem",
+      screens: {
+        sm: "600px",
+        md: "728px",
+        lg: "984px",
+        xl: "1240px",
+        "2xl": "1240px",
+      },
     },
     extend: {
       colors: {
@@ -21,6 +28,9 @@ const config: Config = {
         silver: "#ecebff",
         "bubble-gum": "#ff77e9",
         bermuda: "#78dcca",
+        myred: "#4A131F",
+        mybrown: "#4F3428",
+        mylightred: "#8D2E2A",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

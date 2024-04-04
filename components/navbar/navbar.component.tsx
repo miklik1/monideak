@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="container navbarContent">
         <Link href="/">
           <Image
-            className="relative pr-8 sm: pr-0"
+            className="relative pr-8"
             src="/logo.svg"
             alt="Monika Deakova Koucink a Mentoring Logo"
             width={229}
@@ -24,7 +24,7 @@ export default function Navbar() {
             priority
           />
         </Link>
-        <div>
+        <div className="flex flex-col sm:flex-row items-end">
           <Button href="/sluzby">
             Nabídka
           </Button>

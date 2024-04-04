@@ -25,7 +25,7 @@ export default function Button({
   return (
     <Link href={href}>
       <div
-        className={`${inter.className} ${!variant && "mr-8 black"} ${
+        className={`${inter.className} ${!variant && "md:mr-8 black"} ${
           variant === "variant-6" && "black"
         } button`}
         style={buttonStyle}

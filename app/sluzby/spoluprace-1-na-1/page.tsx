@@ -6,8 +6,8 @@ import Card from "@/components/card/card.component";
 export default function Spoluprace() {
   return (
     <main className="spoluprace-page page-background-bottom-small  flex justify-center">
-      <div className="container p-4 flex flex-col lg:flex-row-reverse justify-between gap-4">
-        <div className="flex justify-center md:items-start py-4 xl:p-10">
+      <div className="container py-16 flex flex-col lg:flex-row-reverse justify-between gap-4">
+        <div className="flex justify-center md:items-start">
           <Image
             className="relative"
             src="/oneonone-large.svg"
@@ -17,7 +17,7 @@ export default function Spoluprace() {
             priority
           />
         </div>
-        <div className="textCont flex gap-8 flex-col px-2 py-4 xl:p-10">
+        <div className="textCont flex gap-8 flex-col text-justify">
           <p>
             <span className="highlight text-2xl">SPOLUPRÁCE 1:1</span> v podobě
             osobních konzultací je pro vás, pokud vám dává smysl na sobě
@@ -32,7 +32,7 @@ export default function Spoluprace() {
             skutečně přejete a kam vás srdce volá.
           </p>
           <p>
-            <span className="highlight text-xl uppercase">
+            <span className="text-mylightred font-bold text-xl uppercase">
               Individuální konzultační provázení
             </span>{" "}
             mi dává možnost se vám plně věnovat a soustředit se na vaše
@@ -42,7 +42,7 @@ export default function Spoluprace() {
           </p>
           <Card>
             <div className="p-10">
-              <p className="text-2xl text-mylightred font-bold">
+              <p className="text-2xl highlight font-bold">
                 SPOLUPRACÍ SE MNOU ZÍSKÁTE:
               </p>
               <ul className="list-disc pl-5">
@@ -79,40 +79,45 @@ export default function Spoluprace() {
             důvěryhodného vztahu a na průběh transformace, která se odehrává v
             čase.
           </p>
-          <div>
-            <p className="highlight text-2xl">Jak to probíhá:</p>
-            <p>
-              <span className="highlight text-lg uppercase">Úvodní hovor</span>{" "}
-              - 30 minut zdarma - ladíme se na sebe navzájem a otevíráme téma,
-              které chcete řešit, zjistíme, zda vzájemná synergie v tuto chvíli
-              dává smysl a hledáme ideální variantu spolupráce:
-            </p>
-          </div>
-          <div>
-            <p>
-              <span className="highlight text-lg uppercase">
-                Jednorázová konzultace
-              </span>{" "}
-              - pokud potřebujete nový impuls, popostrčit nebo jen získat nový
-              pohled na vaše téma.
-            </p>
-            <p>
-              <span className="highlight text-lg uppercase">
-                Konzultační balíček
-              </span>{" "}
-              - 3 x 60 minut
-            </p>
-            <p>
-              <span className="highlight text-lg uppercase">
-                Dlouhodobá spolupráce
-              </span>{" "}
-              - 6 x 60 minut
-            </p>
-          </div>
+          <Card>
+            <div className="p-10">
+              <p className="text-2xl highlight font-bold pb-6">
+                Možné varianty:
+              </p>
+              <div className="flex flex-row justify-between font-bold uppercase">
+                <p>Jednorázová konzultace</p>
+                <p>2 500 Kč</p>
+              </div>
+              <p className="mb-5">
+                80 minut - pokud potřebujete nový impuls,
+                <br /> popostrčit nebo jen získat nový pohled na vaše téma.
+              </p>
+              <div className="flex flex-row justify-between font-bold uppercase">
+                <p>Konzultační balíček</p>
+                <p>6 600 Kč</p>
+              </div>
+              <p className="mb-5">3 x 80 minut 1-2x měsíčně</p>
+              <div className="flex flex-row justify-between font-bold uppercase">
+                <p>Dlouhodobá spolupráce</p>
+                <p>11 000 Kč</p>
+              </div>
+              <p>6 x 80 minut 1-2x měsíčně</p>
+            </div>
+          </Card>
+          <p>
+            Máte možnost využít{" "}
+            <span className="uppercase font-bold">
+              20 minutovou konzultaci{" "}
+              <span className="text-mylightred">ZDARMA</span>
+            </span>
+            , na které se společně seznámíme a otevřeme téma, které chcete
+            řešit. Zjistíme, zda vzájemná synergie v tuto chvíli dává smysl a
+            budeme hledat ideální variantu případné spolupráce.
+          </p>
 
           <div>
-            <Button href="/kontakt" variant="variant-7">
-              To chci
+            <Button href="/kontakt" variant="variant-9">
+              Rezervovat termín
             </Button>
           </div>
         </div>

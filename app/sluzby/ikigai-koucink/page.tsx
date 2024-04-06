@@ -5,9 +5,9 @@ import Card from "@/components/card/card.component";
 
 export default function Ikigai() {
   return (
-    <main className="ikigai-page page-background-bottom-small flex justify-center">
-      <div className="container p-4 flex flex-col lg:flex-row-reverse justify-between gap-4">
-        <div className="flex justify-center md:items-start py-4 xl:p-10">
+    <main className="page ikigai-page page-background-bottom-small flex justify-center">
+      <div className="container py-16 flex flex-col lg:flex-row-reverse justify-between gap-8">
+        <div className="flex justify-center md:items-start">
           <Image
             className="relative"
             src="/ikigai-large.svg"
@@ -17,7 +17,7 @@ export default function Ikigai() {
             priority
           />
         </div>
-        <div className="textCont flex gap-8 flex-col px-2 py-4 xl:p-10">
+        <div className="textCont flex gap-8 flex-col text-justify">
           <p>
             <span className="highlight text-2xl">IKIGAI</span> je životní
             filosofie pocházející z Japonska, jejíž podstatou je žít naplněný
@@ -39,8 +39,10 @@ export default function Ikigai() {
             <p className="text-lg text-mylightred font-bold">
               NA TÉTO OBJEVNÉ CESTĚ ZÍSKÁTE:
             </p>
-            <ul className="list-disc pl-5">
-              <li>nový podporující pohled na vás a váš život</li>
+            <ul className="list-disc pl-5 decoration-1">
+              <li className="decoration-1">
+                nový podporující pohled na vás a váš život
+              </li>
               <li>větší jasnost ve vašem dalším směřování a vizích</li>
               <li>odvahu činit rozhodnutí a kroky směřující za vašimi sny</li>
               <li>otevřené pole nových možností</li>
@@ -91,18 +93,19 @@ export default function Ikigai() {
           </Card>
           <p>
             Během procesu budeme tvořit váš{" "}
-            <span className="highlight">IKIGAI BOOK</span> - vaší osobní knihu,
-            kde budu zaznamenávat všechny podstatné “objevy” z vaší cesty. Kniha
-            bude průběžně doplňována o sebekoučovací otázky pro váš hlubší ponor
-            a ještě větší přínos z celého procesu. Sebekoučink je důležitou a
-            nedílnou součástí této vaší cesty. 
+            <span className="text-mylightred font-bold">IKIGAI BOOK</span> -
+            vaší osobní knihu, kde budu zaznamenávat všechny podstatné “objevy”
+            z vaší cesty. Kniha bude průběžně doplňována o sebekoučovací otázky
+            pro váš hlubší ponor a ještě větší přínos z celého procesu.
+            Sebekoučink je důležitou a nedílnou součástí této vaší cesty. 
           </p>
           <p>
             Na konci procesu si s mou podporou vytvoříte svůj{" "}
-            <span className="highlight">IKIGAI DIAGRAM</span> a odnesete si svůj{" "}
-            <span className="highlight">IKIGAI BOOK</span> s hodnotným obsahem.
-            Jako BONUS ode mne obdržíte překvapení, které vás ještě více podpoří
-            na vaší další cestě.
+            <span className="text-mylightred font-bold">IKIGAI DIAGRAM</span> a
+            odnesete si svůj{" "}
+            <span className="text-mylightred font-bold">IKIGAI BOOK</span> s
+            hodnotným obsahem. Jako BONUS ode mne obdržíte překvapení, které vás
+            ještě více podpoří na vaší další cestě.
           </p>
           <p>Setkání probíhají online.</p>
           <div>
@@ -112,8 +115,8 @@ export default function Ikigai() {
             <p>(platba předem - možnost 2 splátek)</p>
           </div>
           <div>
-            <Button href="/kontakt" variant="variant-3">
-              Mám zájem o úvodní setkání zdarma
+            <Button href="/kontakt" variant="variant-9">
+              Rezervovat termín
             </Button>
           </div>
         </div>

@@ -31,6 +31,7 @@ const config: Config = {
         myred: "#4A131F",
         mybrown: "#4F3428",
         mylightred: "#8D2E2A",
+        mylife: "#5B161B",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

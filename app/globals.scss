@@ -24,9 +24,38 @@ body {
 .page {
   width: 100%;
   height: calc(100vh - 120px);
+  overflow-y: auto;
 }
 
 .page-background-side {
+  .content-wrapper::after {
+    content: "";
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: url("/bg-pattern-bottom.svg") right 100% no-repeat;
+    z-index: -1;
+    background-size: cover;
+  }
+  @media only screen and (min-width: 1024px) {
+    .content-wrapper::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
+      background: url("/bg-pattern-side.svg") right 100% no-repeat;
+      z-index: -1;
+      background-size: cover;
+    }
+  }
+}
+.page-background-side-desktop-only {
   @media only screen and (min-width: 1024px) {
     .content-wrapper::after {
       content: "";
@@ -75,6 +104,10 @@ body {
       background-size: cover;
     }
   }
+}
+
+li::marker {
+  font-size: 0.7em;
 }
 
 .container {

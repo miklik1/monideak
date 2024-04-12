@@ -11,7 +11,7 @@ export default function Contact() {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
           <div className="flex flex-col items-start justify-center gap-12">
             <h1 className="text-4xl md:text-6xl">Kontakt</h1>
-            <p className="text-xl font-bold ">monikadeak@gmail.com</p>
+            <p className="text-xl font-bold ">monideak75@gmail.com</p>
             <div className="flex gap-x-8">
               <Image
                 className="relative"

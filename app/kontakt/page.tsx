@@ -29,14 +29,6 @@ export default function Contact() {
                 height={32}
                 priority
               />
-              <Image
-                className="relative"
-                src="/icons/linkedin.svg"
-                alt="linkedin"
-                width={32}
-                height={32}
-                priority
-              />
             </div>
             <div>
               <Button variant="variant-4" href="https://www.reservio.com/">
@@ -65,11 +57,11 @@ export default function Contact() {
             />
           </div>
         </div>
+        {/* <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
+          <ContactForm />
+          <ContactForm />
+        </div> */}
       </div>
-      {/* <div className="container flex gap-8 md:gap-16 flex-col md:flex-row items-center justify-between">
-        <ContactForm />
-        <ContactForm />
-      </div> */}
     </main>
   );
 }

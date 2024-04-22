@@ -7,7 +7,7 @@ export default function Spoluprace() {
   return (
     <main className="spoluprace-page page-background-bottom-small  flex justify-center">
       <div className="container py-16 flex flex-col lg:flex-row-reverse justify-between gap-4">
-        <div className="flex justify-center md:items-start">
+        <div className="flex justify-center md:items-start mb-8">
           <Image
             className="relative"
             src="/oneonone-large.svg"
@@ -32,7 +32,7 @@ export default function Spoluprace() {
             skutečně přejete a kam vás srdce volá.
           </p>
           <p>
-            <span className="text-mylightred font-bold text-xl uppercase">
+            <span className="text-mylightred font-bold text-xl uppercase text-left">
               Individuální konzultační provázení
             </span>{" "}
             mi dává možnost se vám plně věnovat a soustředit se na vaše
@@ -41,7 +41,7 @@ export default function Spoluprace() {
             změnu.
           </p>
           <Card>
-            <div className="p-10">
+            <div className="p-8 md:p-10 text-left">
               <p className="text-2xl highlight font-bold">
                 SPOLUPRACÍ SE MNOU ZÍSKÁTE:
               </p>
@@ -62,25 +62,17 @@ export default function Spoluprace() {
             Tvořím pro vás bezpečný a vyživující prostor, ve kterém budete mít
             mou plnou pozornost i respekt k vašemu osobnímu příběhu. Místo, kde
             budete moci býti sami sebou, kde vás nikdo nehodnotí ani nesoudí.
-            Prostor který je v danou chvíli určen jen VÁM.
+            Prostor který je určen jen VÁM.
           </p>
           <p>
             Je jedno na jakém místě v životě se teď momentálně nacházíte, z
-            každého bodu se můžete posunout výš a dál. Vše je možné, stačí se
-            pro to rozhodnout a vykročit. Má mise, je podpořit vás v tom, že to
-            dokážete.Je jedno na jakém místě v životě se teď momentálně
-            nacházíte, z každého bodu se můžete posunout výš a dál. Vše je
-            možné, stačí se pro to rozhodnout a vykročit. Má mise, je podpořit
-            vás v tom, že to dokážete. vás v tom, že to dokážete. vás v tom, že
-            to dokážete.
+            každého bodu se můžete posunout dál. Vše je možné, stačí se pro to
+            rozhodnout a vykročit. Má mise, je podpořit vás v tom, že to
+            dokážete.
           </p>
-          <p>
-            Preferuji dlouhodobější spolupráci s ohledem na vytvoření vzájemného
-            důvěryhodného vztahu a na průběh transformace, která se odehrává v
-            čase.
-          </p>
+          <p>Setkání probíhají online (ZOOM)</p>
           <Card>
-            <div className="p-10">
+            <div className="text-left p-8 md:p-10 ">
               <p className="text-2xl highlight font-bold pb-6">
                 Možné varianty:
               </p>
@@ -89,8 +81,8 @@ export default function Spoluprace() {
                 <p>2 500 Kč</p>
               </div>
               <p className="mb-5">
-                80 minut - pokud potřebujete nový impuls,
-                <br /> popostrčit nebo jen získat nový pohled na vaše téma.
+                80 minut - pokud potřebujete nový impuls, popostrčit nebo jen
+                získat nový pohled na vaše téma.
               </p>
               <div className="flex flex-row justify-between font-bold uppercase">
                 <p>Konzultační balíček</p>

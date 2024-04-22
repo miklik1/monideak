@@ -13,14 +13,15 @@ export default function Home() {
               Monika Deáková
             </h1>
             <p className="text-lg max-w-[540px] text-mylightred">
-              Certifikovaná IKIGAI koučka a life-balance mentorka s více než 20
-              letou zkušeností v oblasti podnikání a práce s lidmi. Manželka,
+              Certifikovaná IKIGAI koučka a life-balance mentorka s více než
+              <br />
+              20 letou zkušeností v oblasti podnikání a práce s lidmi. Manželka,
               maminka dvou dospělých dětí a vášnivá tvůrkyně domova.
             </p>
             <p className="text-lg max-w-[540px]">
               Mým záměrem je ukázat vám nové možnosti, jak zvládat životní výzvy
-              s větší lehkostí, posílit váš laskavý a respektující přístup k
-              sobě a změnám a pomoci vám nalézt více síly a energie pro vaše
+              a změny s větší lehkostí, posílit váš laskavý a respektující
+              přístup k sobě a pomoci vám nalézt více síly a energie pro vaše
               každodenní kroky.
             </p>
             <p className="text-lg max-w-[540px]">
@@ -32,7 +33,7 @@ export default function Home() {
             <p className="text-lg max-w-[540px]">
               Jsem žena s akční energií, která dává procesy do pohybu, přináší
               nové impulsy a probouzí k životu. Ráda dělám věci s přesahem a
-              jsou mi vlastní jasnost, jednoduchost, praktičnost a autenticita.
+              jsou mi vlastní jasnost, jednoduchost, praktičnost a autenticita. 
             </p>
             <p className="text-lg max-w-[540px]">
               Jsem přesvědčena, že vše se vším souvisí a každý to má /právo mít/
@@ -62,7 +63,7 @@ export default function Home() {
             </div>
 
             <div>
-              <Button href="sluzby" variant="variant-8">
+              <Button href="kontakt" variant="variant-8">
                 Kontaktujte mě
               </Button>
             </div>

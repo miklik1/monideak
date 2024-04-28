@@ -8,8 +8,9 @@ const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
   message,
 }) => (
   <div>
-    <h1>Contact form submission</h1>
-    <h2>Message:</h2>
+    <h1>Vyplnění kontaktního formuláře</h1>
+    <p>Od {email}</p>
+    <h2>Zpráva:</h2>
     <p>{message}</p>
   </div>
 );

@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const FormDataSchema = z.object({
-  name: z.string().nonempty("Name is required."),
+  email: z.string().nonempty("E-mail je povinný").email("Neplatný e-mail."),
   message: z
     .string()
     .nonempty("Zpráva je povinná.")
@@ -9,12 +9,13 @@ export const FormDataSchema = z.object({
 });
 
 export const ContactFormSchema = z.object({
-  email: z
-    .string()
-    .nonempty("E-mail je povinný")
-    .email("Nesprávný formát e-mailu."),
+  email: z.string().nonempty("E-mail je povinný").email("Neplatný e-mail."),
   message: z
     .string()
     .nonempty("Zpráva je povinná.")
     .min(6, { message: "Zpráva musí mít nejméně 6 znaků." }),
+});
+
+export const NewsletterFormSchema = z.object({
+  email: z.string().nonempty("E-mail je povinný").email("Neplatný e-mail."),
 });

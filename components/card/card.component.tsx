@@ -5,10 +5,7 @@ export type TCardProps = {
   children: JSX.Element;
 };
 
-export default function Card({
-  variant = "variant-1",
-  children,
-}: TCardProps) {
+export default function Card({ variant = "variant-1", children }: TCardProps) {
   // const backgroundUrl = `/cards/${variant}.svg`;
 
   // const cardStyle = {

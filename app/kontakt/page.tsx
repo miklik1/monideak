@@ -2,36 +2,47 @@ import Image from "next/image";
 import "./page.styles.scss";
 import Button from "@/components/button/button.component";
 import Card from "@/components/card/card.component";
-import ContactForm from "@/components/forms/contact-form";
+import ContactForm from "@/components/forms/form-contact";
+import NewsletterForm from "@/components/forms/form-newsletter";
 
 export default function Contact() {
   return (
     <main className="page page-background-bottom flex justify-start px-6 py-12">
-      <div className="container content-wrapper !my-0">
+      <div className="container content-wrapper flex !my-0 flex-col justify-between">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
-          <div className="flex flex-col items-start justify-center gap-12">
+          <div className="flex flex-col items-start justify-center gap-12 ">
             <h1 className="text-4xl md:text-6xl">Kontakt</h1>
-            <p className="text-xl font-bold ">monideak75@gmail.com</p>
+            <p className="text-xl font-bold ">info@monideak.cz</p>
             <div className="flex gap-x-8">
-              <Image
-                className="relative"
-                src="/icons/facebook.svg"
-                alt="facebook"
-                width={32}
-                height={32}
-                priority
-              />
-              <Image
-                className="relative"
-                src="/icons/instagram.svg"
-                alt="instagram"
-                width={32}
-                height={32}
-                priority
-              />
+              <a
+                href="https://www.facebook.com/monika.deakova.16"
+                target="_blank"
+              >
+                <Image
+                  className="relative"
+                  src="/icons/facebook.svg"
+                  alt="facebook"
+                  width={32}
+                  height={32}
+                  priority
+                />
+              </a>
+              <a href="https://www.instagram.com/moni_deak/" target="_blank">
+                <Image
+                  className="relative"
+                  src="/icons/instagram.svg"
+                  alt="instagram"
+                  width={32}
+                  height={32}
+                  priority
+                />
+              </a>
             </div>
             <div>
-              <Button variant="variant-4" href="https://www.reservio.com/">
+              <Button
+                variant="variant-10"
+                href="https://calendly.com/monideak/meeting"
+              >
                 <div className="flex">
                   Rezervujte si úvodní hovor
                   <Image
@@ -48,7 +59,7 @@ export default function Contact() {
           </div>
           <div className="image-section mb-10">
             <Image
-              src="/images/contact.png"
+              src="/images/kontakt.png"
               alt="kontakt foto"
               width={408}
               height={427}
@@ -57,10 +68,10 @@ export default function Contact() {
             />
           </div>
         </div>
-        {/* <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-center lg:items-start gap-12">
           <ContactForm />
-          <ContactForm />
-        </div> */}
+          <NewsletterForm />
+        </div>
       </div>
     </main>
   );

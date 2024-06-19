@@ -10,6 +10,7 @@ import { addContact } from "@/app/_actions";
 import { toast } from "sonner";
 import Card from "../card/card.component";
 import ButtonSubmit from "../button/button-submit.component";
+import "./contact.styles.scss";
 
 export type NewsletterFormInputs = z.infer<typeof NewsletterFormSchema>;
 
@@ -39,8 +40,7 @@ export default function NewsletterForm() {
   };
 
   return (
-    <div className="mb-8">
-      <Card>
+    <div className="form-newsletter mb-8 lg:w-1/2">
         <div className="p-8 lg:p-12">
           <h1 className="text-xl font-semibold">
             Nebo se přihlásit k odběru novinek
@@ -76,7 +76,6 @@ export default function NewsletterForm() {
             </ButtonSubmit>
           </form>
         </div>
-      </Card>
-    </div>
+      </div>
   );
 }

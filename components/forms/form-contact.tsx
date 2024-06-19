@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import Card from "../card/card.component";
 import Button from "../button/button.component";
 import ButtonSubmit from "../button/button-submit.component";
+import "./contact.styles.scss";
 
 export type ContactFormInputs = z.infer<typeof ContactFormSchema>;
 
@@ -40,8 +41,8 @@ export default function ContactForm() {
   };
 
   return (
-    <Card>
-      <div className="p-8 lg:p-12 w-100 lg:w-[530px]">
+    <div className="form-contact lg:w-1/2 ">
+      <div className="p-8 lg:p-12 w-100 lg:w-full">
         <h1 className="text-xl font-semibold">Můžete mi zanechat zprávu</h1>
         <form onSubmit={handleSubmit(processForm)} className="mt-6">
           <div className="mt-6 flex-1">
@@ -80,6 +81,6 @@ export default function ContactForm() {
           </ButtonSubmit>
         </form>
       </div>
-    </Card>
+    </div>
   );
 }

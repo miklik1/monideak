@@ -1,14 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import Button from "../button/button.component";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import "./navbar.styles.scss";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const isKontaktPage = pathname === "/kontakt";
+  const [isKontaktPage, setIsKontaktPage] = useState(false);
+
+  useEffect(() => {
+    setIsKontaktPage(pathname === "/kontakt");
+  }, [pathname]);
 
   return (
     <div className="navbar">

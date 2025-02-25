@@ -1,18 +1,13 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-
 import { NewsletterFormSchema } from "@/lib/schema";
-import { addContact } from "@/app/_actions";
+import { addContact } from "@/app/api/newsletter/actions";
 import { toast } from "sonner";
-import Card from "../card/card.component";
-import ButtonSubmit from "../button/button-submit.component";
+import { ButtonSubmit } from "@/components/ui/button";
+import { NewsletterFormInputs } from "@/types/forms";
 import "./contact.styles.scss";
-
-export type NewsletterFormInputs = z.infer<typeof NewsletterFormSchema>;
 
 export default function NewsletterForm() {
   const {

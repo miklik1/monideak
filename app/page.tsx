@@ -1,6 +1,6 @@
 import Image from "next/image";
 import "./page.styles.scss";
-import Button from "@/components/button/button.component";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (

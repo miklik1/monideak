@@ -1,19 +1,13 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-
 import { ContactFormSchema } from "@/lib/schema";
-import { sendEmail } from "@/app/_actions";
+import { sendEmail } from "@/app/api/email/actions";
 import { toast } from "sonner";
-import Card from "../card/card.component";
-import Button from "../button/button.component";
-import ButtonSubmit from "../button/button-submit.component";
+import { Button, ButtonSubmit } from "@/components/ui/button";
+import { ContactFormInputs } from "@/types/forms";
 import "./contact.styles.scss";
-
-export type ContactFormInputs = z.infer<typeof ContactFormSchema>;
 
 export default function ContactForm() {
   const {

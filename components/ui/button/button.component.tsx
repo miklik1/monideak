@@ -17,11 +17,11 @@ export default function Button({
   variant,
   children,
 }: TButtonProps) {
-  const backgroundUrl = `/buttons/${variant}.svg`;
-
-  const buttonStyle = {
-    background: `no-repeat center/100% url("${backgroundUrl}")`,
-  };
+  const buttonStyle = variant
+    ? {
+        background: `no-repeat center/100% url("/buttons/${variant}.svg")`,
+      }
+    : {};
 
   return (
     <Link href={href}>

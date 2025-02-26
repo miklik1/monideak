@@ -1,6 +1,6 @@
 import Image from "next/image";
 import "./page.styles.scss";
-import Button from "@/components/button/button.component";
+import { Button } from "@/components/ui/button";
 import Card from "@/components/card/card.component";
 
 export default function Services() {

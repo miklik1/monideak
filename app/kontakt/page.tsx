@@ -1,6 +1,6 @@
 import Image from "next/image";
 import "./page.styles.scss";
-import Button from "@/components/button/button.component";
+import { Button } from "@/components/ui/button";
 import Card from "@/components/card/card.component";
 import ContactForm from "@/components/forms/form-contact";
 import NewsletterForm from "@/components/forms/form-newsletter";

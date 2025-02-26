@@ -46,4 +46,24 @@ export const categoriesQuery = groq`
     title,
     description
   }
-` 
+`
+
+export const servicesQuery = `*[_type == "service"] | order(order asc) {
+  _id,
+  title,
+  slug,
+  mainImage,
+  excerpt,
+  price,
+  duration
+}`
+
+export const serviceBySlugQuery = `*[_type == "service" && slug.current == $slug][0] {
+  _id,
+  title,
+  slug,
+  mainImage,
+  body,
+  price,
+  duration
+}` 

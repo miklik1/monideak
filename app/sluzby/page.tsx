@@ -1,72 +1,77 @@
-import Image from "next/image";
+import { client } from '@/sanity/lib/client'
+import { servicesQuery } from '@/sanity/lib/queries'
+import { urlFor } from '@/sanity/lib/image'
+import Image from 'next/image'
+import Link from 'next/link'
 import "./page.styles.scss";
 import { Button } from "@/components/ui/button";
 import Card from "@/components/card/card.component";
 
-export default function Services() {
+export const revalidate = 60
+
+interface Service {
+  _id: string
+  title: string
+  slug: {
+    current: string
+  }
+  mainImage: any
+  excerpt: string
+  price: number
+  duration: string
+}
+
+async function getServices() {
+  const services = await client.fetch(servicesQuery)
+  return services
+}
+
+export default async function ServicesPage() {
+  const services = await getServices()
+
   return (
     <main className="page page-background-bottom flex justify-center px-1 md:px-6 py-6">
       <div className="container content-wrapper">
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl mb-8 mt-8 lg:mb-16 lg:mt-0">
           Jak vám můžu pomoci
         </h1>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-10">
-          <Card>
-            <div className="cardCont gap-3">
-              <Image
-                className="relative"
-                src="/ikigai.svg"
-                alt="ikigai"
-                width={104}
-                height={100}
-                priority
-              />
-
-              <h2 className="text-2xl mb-1 mt-2 text-mybrown font-bold">
-                Ikigai koučink
-              </h2>
-              <p className="text-myred">
-                Cesta sebepoznání, na které lépe porozumíte tomu, kým opravdu
-                jste a budete se tak moci v životě posunout tam, kde si přejete
-                být. Najděte a žijte svůj vlastní styl života, který vás bude
-                bavit a který si zamilujete.
-              </p>
-              <div>
-                <Button href="sluzby/ikigai-koucink" variant="variant-1">
-                  Zjistit více
-                </Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service: Service) => (
+            <Link 
+              key={service._id}
+              href={`/sluzby/${service.slug.current}`}
+              className="group"
+            >
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
+                {service.mainImage && (
+                  <div className="relative aspect-video">
+                    <Image
+                      src={urlFor(service.mainImage).url()}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <h2 className="text-2xl font-semibold mb-3">{service.title}</h2>
+                  {service.excerpt && (
+                    <p className="text-gray-600 mb-4">{service.excerpt}</p>
+                  )}
+                  <div className="flex justify-between items-center text-sm text-gray-500">
+                    {service.duration && (
+                      <span>⏱ {service.duration}</span>
+                    )}
+                    {service.price && (
+                      <span>💰 {service.price} Kč</span>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          </Card>
-          <Card variant="variant-2">
-            <div className="cardCont gap-3">
-              <Image
-                className="relative"
-                src="/oneonone.svg"
-                alt="spoluprace 1 na 1"
-                width={112}
-                height={104}
-                priority
-              />
-
-              <h2 className="text-2xl mb-1 mt-2 text-mybrown font-bold">
-                Spolupráce 1 na 1
-              </h2>
-              <p className="text-myred">
-                Individuální konzultační provázení a podpora pro váš další
-                rozvoj a pro změnu vašeho osobního i pracovního života k
-                lepšímu. Objevte pro sebe nové možnosti a s větší jasností a
-                novou energií pokračujte na vaší jedinečné cestě životem.
-              </p>
-              <div>
-                <Button href="sluzby/spoluprace-1-na-1" variant="variant-1">
-                  Zjistit více
-                </Button>
-              </div>
-            </div>
-          </Card>
+            </Link>
+          ))}
         </div>
       </div>
     </main>
-  );
+  )
 }

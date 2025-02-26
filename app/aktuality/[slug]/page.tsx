@@ -8,12 +8,6 @@ import { Metadata } from 'next'
 
 export const revalidate = 60
 
-interface Props {
-  params: {
-    slug: string
-  }
-}
-
 interface Category {
   title: string
 }
@@ -31,19 +25,14 @@ export async function generateStaticParams() {
   }))
 }
 
-type MetadataProps = {
-  params: { slug: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
 export async function generateMetadata(
-  { params, searchParams }: MetadataProps,
+  { params }: { params: { slug: string } }
 ): Promise<Metadata> {
   const post = await getPost(params.slug)
   
   if (!post) {
     return {
-      title: 'Post Not Found'
+      title: 'Post nenalezen'
     }
   }
 
@@ -52,7 +41,11 @@ export async function generateMetadata(
   }
 }
 
-export default async function PostPage({ params }: Props) {
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const post = await getPost(params.slug)
 
   if (!post) {
@@ -118,23 +111,7 @@ export default async function PostPage({ params }: Props) {
       </header>
 
       <div className="prose prose-lg max-w-none">
-        <PortableText 
-          value={post.body} 
-          components={{
-            types: {
-              image: ({value}) => (
-                <div className="relative w-full aspect-video my-8">
-                  <Image
-                    src={urlFor(value).url()}
-                    alt={value.alt || ' '}
-                    fill
-                    className="object-cover rounded-lg"
-                  />
-                </div>
-              ),
-            },
-          }}
-        />
+        <PortableText value={post.body} />
       </div>
     </article>
   )

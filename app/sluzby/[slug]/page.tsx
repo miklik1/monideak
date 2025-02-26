@@ -5,15 +5,10 @@ import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { Button } from "@/components/ui/button"
 import Card from "@/components/card/card.component"
-import "./page.styles.scss"
+import styles from "./page.module.scss"
+import { Metadata } from 'next'
 
 export const revalidate = 60
-
-interface Props {
-  params: {
-    slug: string
-  }
-}
 
 interface Service {
   title: string
@@ -28,7 +23,17 @@ async function getService(slug: string) {
   return service
 }
 
-export async function generateMetadata({ params }: Props) {
+// This generates the paths at build time
+export async function generateStaticParams() {
+  const services = await client.fetch(`*[_type == "service"]{ slug }`)
+  return services.map((service: { slug: { current: string } }) => ({
+    slug: service.slug.current,
+  }))
+}
+
+export async function generateMetadata(
+  { params }: { params: { slug: string } }
+): Promise<Metadata> {
   const service = await getService(params.slug)
   
   if (!service) {
@@ -42,7 +47,11 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-export default async function ServicePage({ params }: Props) {
+export default async function ServicePage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const service = await getService(params.slug)
 
   if (!service) {
@@ -54,7 +63,7 @@ export default async function ServicePage({ params }: Props) {
   }
 
   return (
-    <main className="page page-background-bottom-small flex justify-center">
+    <main className={`page page-background-bottom-small flex justify-center ${styles.servicePage}`}>
       <div className="container py-16">
         <div className="flex flex-col lg:flex-row-reverse justify-between gap-8 mb-16">
           {service.mainImage && (
